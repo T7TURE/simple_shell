@@ -1,5 +1,11 @@
 #include "shell.h"
 
+/**
+ * main - Entry point of the shell program
+ *
+ * Return: Exit status of the shell program
+ */
+
 int main(void)
 {
 	char *line;

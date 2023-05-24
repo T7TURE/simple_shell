@@ -1,5 +1,11 @@
 #include "shell.h"
 
+/**
+ * read_line - Read a line of input from stdin
+ *
+ * Return: The input line read from stdin
+ */
+
 char *read_line(void)
 {
 	char *line = NULL;
