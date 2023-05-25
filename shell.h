@@ -11,6 +11,8 @@
 #define BUFFER_SIZE 1024
 #define TOKEN_DELIM " \t\r\n\a"
 
+extern char **environ;
+
 void prompt(void);
 char *read_line(void);
 char **parse_line(char *line);
@@ -18,4 +20,3 @@ int execute(char **args);
 void panic(char *message);
 
 #endif
-
