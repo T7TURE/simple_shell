@@ -13,4 +13,8 @@ void prompt(void)
 		write(STDOUT_FILENO, msg, strlen(msg));
 		fflush(stdout);
 	}
+	else
+	{
+		write(STDOUT_FILENO, "\n", 1);
+	}
 }
