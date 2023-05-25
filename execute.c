@@ -27,18 +27,11 @@ int execute(char **args)
 			perror(args[0]);
 			exit(EXIT_FAILURE);
 		}
-		else
-		{
-			perror("execvp");
-			exit(EXIT_FAILURE);
-		}
 	}
 	else
 	{
 		waitpid(pid, &status, 0);
-		return (WEXITSTATUS(status));
 	}
 
-	return (1);
+	return (status);
 }
-

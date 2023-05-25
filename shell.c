@@ -17,12 +17,20 @@ int main(void)
 		prompt();
 		line = read_line();
 		args = parse_line(line);
+
+		if (args[0] == NULL)
+		{
+			free(line);
+			free(args);
+			continue;
+		}
+
 		status = execute(args);
 
 		free(line);
 		free(args);
 
-		if (status == 0)
+		if (status == 0 || strcmp(args[0], "exit") == 0)
 			break;
 	}
 
